@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
+import { OptionsList, OptionButton } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <ul>
+    <OptionsList>
       {options.map(option => {
         return (
           <li key={option}>
-            <button
+            <OptionButton
               type="button"
               value={option}
               children={option}
@@ -15,11 +16,11 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
               }}
             >
               {option}
-            </button>
+            </OptionButton>
           </li>
         );
       })}
-    </ul>
+    </OptionsList>
   );
 };
 

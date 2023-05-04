@@ -1,8 +1,16 @@
+import PropTypes from 'prop-types';
+import { SectionContainer, Title } from './Section.styled';
+
 export const Section = ({ title, children }) => {
   return (
-    <div>
-      {title}
+    <SectionContainer>
+      <Title>{title}</Title>
       {children}
-    </div>
+    </SectionContainer>
   );
+};
+
+Section.protoType = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.object.isRequired,
 };
