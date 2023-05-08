@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Notification } from 'components/Notification';
+// import { Notification } from 'components/Notification';
 import { StatisticsList, StatisticsItem, Span } from './Statistics.styled';
 export const Statistics = ({
   good,
@@ -8,7 +8,7 @@ export const Statistics = ({
   total,
   positivePercentage,
 }) => {
-  return total ? (
+  return (
     <StatisticsList>
       <StatisticsItem>
         Good: <Span>{good}</Span>
@@ -26,8 +26,6 @@ export const Statistics = ({
         Positive feedback: <Span>{positivePercentage}%</Span>
       </StatisticsItem>
     </StatisticsList>
-  ) : (
-    <Notification message="There is no feedback" />
   );
 };
 

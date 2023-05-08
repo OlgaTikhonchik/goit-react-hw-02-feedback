@@ -5,4 +5,8 @@ export const TitleNotification = styled.h2`
   font-weight: 800;
   color: aquamarine;
   text-align: center;
+
+  :hover {
+    color: #28604d;
+  }
 `;
